@@ -120,25 +120,18 @@ var firstClasstotal =0;
 var secondClasstotal =0;
 
 function incriseTicket(ticketPriceId,whichClass){//incrise itm
-        if(whichClass =='first-Class'){
-            var ticketPrice = parseInt(document.getElementById(ticketPriceId).innerText)
-            firstClassPrise = parseInt(ticketPrice * (firstClassticketNo+=1))
-            firstClassvat =parseFloat(firstClassPrise*0.1)
-            firstClasstotal =firstClassPrise + firstClassvat
-            // console.log('first classs',firstClassPrise, 'vat ', firstClassvat, 'total',firstClasstotal);
-            showToUser()
+var singleticketPrice = parseInt(document.getElementById(ticketPriceId).innerText)
+// console.log(ticketPrice);
+if(whichClass =='first-Class'){
+    firstClassticketNo++
+    console.log(firstClassticketNo);
 
-        }
-        else{
-            var ticketPrice = parseInt(document.getElementById(ticketPriceId).innerText)
-            secondClassPrise = parseInt(ticketPrice * (secondClassticketNo+=1))
-            secondClassvat =parseFloat(secondClassPrise*0.1)
-            secondClasstotal =secondClassPrise + secondClassvat
-            // console.log('first classs',secondClassPrise,'second',secondClassvat,'total',secondClasstotal);  
-            showToUser()    
-          }
-   
-    // showToUser()
+}
+else{
+    secondClassticketNo++
+    console.log(secondClassticketNo);
+
+}
 
 }
 
@@ -172,7 +165,7 @@ function decriseTicket(ticketPriceId,whichClass){
 // alert on clicking book now
 
 function bookedAlert(){
-    alert(`${firstClassticketNo} first class and  \n ${secondClassticketNo} econome class ticked booked \n total cost ${firstClasstotal+secondClasstotal}`)
+    alert(`${firstClassticketNo} first class and  \n ${secondClassticketNo} econome class ticked booked`)
 }
 
 
@@ -187,11 +180,11 @@ function bookedAlert(){
 
 
 function showToUser(){
-    document.getElementById("firsClassSubtotal").innerText =firstClassPrise+secondClassPrise
-    document.getElementById("firsClassVat").innerText =firstClassvat+secondClassvat
-    document.getElementById('total-ammount').innerText = firstClasstotal+secondClasstotal
-    document.getElementById('firstClassNo').value = firstClassticketNo
-    document.getElementById('secondClassNo').value = secondClassticketNo
+    // document.getElementById("firsClassSubtotal").innerText =firstClassPrise+secondClassPrise
+    // document.getElementById("firsClassVat").innerText =firstClassvat+secondClassvat
+    // document.getElementById('total-ammount').innerText = firstClasstotal+secondClasstotal
+    // document.getElementById('firstClassNo').value = firstClassticketNo
+    // document.getElementById('secondClassNo').value = secondClassticketNo
 }
     </script>
 </body>
