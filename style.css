@@ -122,4 +122,8 @@ nav ul li a:hover, a.active{
 }
 button{
     font-size: 40px;
+ background-color: rgb(168, 164, 164)
+}
+.ticketNo{
+    font-size: 30px;
 }
